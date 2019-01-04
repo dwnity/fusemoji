@@ -129,16 +129,16 @@ class UniEmojiIBusEngine(IBus.Engine):
                     self.commit_candidate()
                     return True
                 return False
-            elif keyval in (IBus.Page_Up, IBus.KP_Page_Up, IBus.Left, IBus.KP_Left):
+            elif keyval == IBus.Page_Up or keyval == IBus.KP_Page_Up or keyval == IBus.Left or keyval == IBus.KP_Left:
                 self.page_up()
                 return True
-            elif keyval in (IBus.Page_Down, IBus.KP_Page_Down, IBus.Right, IBus.KP_Right):
+            elif keyval == IBus.Page_Down or keyval == IBus.KP_Page_Down or keyval == IBus.Right or keyval == IBus.KP_Right:
                 self.page_down()
                 return True
-            elif keyval in (IBus.Up, IBus.KP_Up):
+            elif keyval == IBus.Up or keyval == IBus.KP_Up:
                 self.cursor_up()
                 return True
-            elif keyval in (IBus.Down, IBus.KP_Down):
+            elif keyval == IBus.Down or keyval == IBus.KP_Down:
                 self.cursor_down()
                 return True
 
